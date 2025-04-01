@@ -18,7 +18,22 @@ document.write 함수: 이것도 출력용<br><br><br>
 
 자료형이란?<br><br>
 
+원시형, 복합형이 있다. 복합형은 array, object로 이루어져 있는데, 둘 다 객체라고 보면 된다.<br><br>
 
+typeof함수: 자료형 확인 가능 괄호는 감싸도 되고 안 감싸도 됨.<br>
+특수 기호 표시: 백슬래쉬를 활용하여 특수문자, 개행문자 등 사용 가능<br>
+출력 방법: 템플릿 리터럴을 이용해 간편하게 출력 가능 (파이썬의 f문자열과 비슷하다고 보면 됨.)<br>
+논리값: 0, "",   NaN(Not a Number), Null, Undefined 5개는 False, 나머지는 True<br>
+Undefined는 선언 후 값 할당 않을 시 나오고, Null은 아예 없는 값이라는 뜻.(Null은 선언되지 않은 것을 출력하고자 할 때 나옴)<br>
+심볼: ES6에 새로 추가됨. 유일성을 보장. 객체에서 key로써 사용.<br>
+let id = Symbol()<br>
+const memeber = {<br>
+  name = "Kim"<br>
+  [id] = 1234<br>
+}<br>
+
+와 같이 사용, member[id] = 12345<br>
+와 같은 방법으로
 
 
 [실습] 화씨온도->섭씨온도 변환기<br>
