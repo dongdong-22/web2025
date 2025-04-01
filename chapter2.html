@@ -33,7 +33,20 @@ const memeber = {<br>
 }<br>
 
 와 같이 사용, member[id] = 12345<br>
-와 같은 방법으로
+와 같은 방법으로 새로운 심볼 추가 가능.<br>
+저러면 id심볼이 재할당되는게 아니라,<br>
+[id] = 1234<br>
+[id] = 12345<br>
+와 같이 그냥 추가된다.(유일성)<br><br>
+
+JavaScript는 동적 자료형 변환을 지원하며, 문자열+숫자에서 +연산자는 연결연산자, 숫자+숫자는 더하기 연산자. 문자열-숫자는 빼기 연산자로 작동.<br><br>
+
+prompt에서 받는 모든 값은 문자열<br>
+Number함수를 통해 숫자로 변경 가능<br>
+Number함수는 입력값에 숫자 외 값이 입력되면 인식하지 못한다(NaN 출력). 또한, Number("Hi") -> NaN출력<br><br>
+
+parseInt, parseFloat도 있음. parseInt는 정수형, parseFloat는 실수형, parseFloat는 숫자 외 다른 것이 들어와도 숫자만 골라 읽어냄.
+
 
 
 [실습] 화씨온도->섭씨온도 변환기<br>
