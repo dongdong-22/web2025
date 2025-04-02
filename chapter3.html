@@ -1,0 +1,32 @@
+<h1>Chapter3 연산자와 제어문</h1><br><br>
+
+연산자<br>
+age = currentYear - birthYear + 1<br>
+=, -, +는 연산자<br><br>
+
+산술연산자: C나 Java, 파이썬이랑 같음<br>
+++, -- 같은 증감연산자도 있음. 이건 단항연산자임<br>
+++a와 a++은 다름.<br><br>
+ex) a=10<br>
+ex1 = a++ (후치연산)<br>
+ex1 = ++a (전치연산)<br>
+해당 행이 실행되고 난 후에는 전치, 후치 모두 결과 같지만, 대입되는 그 순간에는 값이 다름.<br><br>
+
+비교 연산자<br>
+파이썬, C와 다른 부분은, ===와 !===이 있다는 것. ===, !===은 자료형까지 완벽히 일치하는지도 따진다.<br>
+ex) 7=="7" -> True, 7==="7" -> False<br><br>
+
+연산자 우선 순위<br>
+단항연산자 > 산술연산자 > 비교연산자 > 논리연산자 > 할당연산자<br><br>
+
+if문 예제<br><br>
+
+<script>
+  age = currentYear - birthYear + 1
+  if(age < 20)
+  {
+    alert("성인이 아닙니다.")
+  }
+  alret(`${currentYear}년 현재, ${age}세입니다.)  
+</script><br><br>
+
