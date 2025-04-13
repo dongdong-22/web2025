@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Chapter4. 함수와 스코프</h1>
+  
+  <b>1함수</b><br>
+  예시:<br>
+  <code>
+    function greet() {<br>
+     console.log("Hello!");<br>
+    }
+  </code><br>
+  과 같이 함수를 선언하면, 재사용성이 좋다.
+
+  <b>익명 함수(Anonymous Function)</b><br>
+  이름이 없는 함수 변수에 담거나 콜백 함수로 주로 사용<br>
+  <code>
+    const greet = function() {<br>
+     console.log("Hi!");<br>
+    };
+  </code><br><br>
+
+  <b>즉시 실행 함수</b><br>
+  정의하자마자 바로 실행되는 함수.<br>
+
+  <b>스코프(Scope)</b><br>
+  변수가 유효한 범위.<br>
+  <u>전역 변수:</u> 전체에서 접근 가능<br>
+  <code>var globalVar = 1;</code><br>
+  <u>지역 변수:</u> 함수나 블록 안에서만 사용 가능<br>
+  <code>
+    function test() {<br>
+     let localVar = 2;<br>
+    }
+  </code><br><br>
+
+  <b>var, let, const</b><br>
+  <u>var</u>: 함수 스코프, 중복 선언 가능, 호이스팅됨<br>
+  <u>let</u>: 블록 스코프, 중복 선언 불가<br>
+  <u>const</u>: 블록 스코프, 선언과 동시에 초기화 필요, 값 변경 불가<br><br>
+
+  <b>화살표 함수(Arrow Function)</b><br>
+  <br>
+  <code>const sum = (a, b) => a + b;</code><br><br>
+
+  <b>콜백 함수(Callback)</b><br>
+  다른 함수의 인자로 전달되어 실행되는 함수<br>
+  <code>
+    function run(callback) {<br>
+     callback();<br>
+    }<br>
+    run(() => { console.log("콜백 실행"); });
+  </code><br><br>
+
+  <b>호이스팅(Hoisting)</b><br>
+  변수나 함수가 선언되기 전에 끌어올려지는 개념<br>
+  <code>
+    console.log(x); // undefined<br>
+    var x = 10;<br>
+    console.log(y); // ReferenceError<br>
+    let y = 20;
+  </code><br><br>
+
+</body>
+</html>
