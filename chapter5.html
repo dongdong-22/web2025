@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<body>
+  <h1>Chapter5. DOM(Document Object Model)</h1>
+
+  <h2>1. DOM이란?</h2>
+  <p>
+    DOM은 <strong>Document Object Model</strong>의 약자로, HTML 문서를 자바스크립트가 이해하고 조작할 수 있도록
+    <strong>"객체 트리 구조"</strong>로 표현한 것.
+  </p>
+  <p>
+    웹 브라우저는 HTML을 해석하면서 내부적으로 DOM 구조를 만들고, 자바스크립트는 이 DOM을 통해 웹페이지 요소에 접근하거나 변경할 수 있어요.
+  </p>
+
+  <h2>2. DOM 트리 구조 예시</h2>
+  <p>예를 들어 다음과 같은 HTML이 있을 때:</p>
+  <pre>
+  &lt;body&gt;
+    &lt;h1&gt;제목&lt;/h1&gt;
+    &lt;p&gt;내용&lt;/p&gt;
+    &lt;button&gt;버튼&lt;/button&gt;
+  &lt;/body&gt;
+  </pre>
+
+  <p>DOM은 이렇게 트리처럼 구성돼요:</p>
+  <ul>
+    <li>document</li>
+    <ul>
+      <li>html</li>
+      <ul>
+        <li>head</li>
+        <li>body</li>
+        <ul>
+          <li>h1</li>
+          <li>p</li>
+          <li>button</li>
+        </ul>
+      </ul>
+    </ul>
+  </ul>
+
+  <h2>3. DOM을 이용한 JavaScript 조작</h2>
+  <p>자바스크립트는 DOM을 통해 HTML 요소를 선택하고 조작할 수 있다.</p>
+  <pre>
+  document.querySelector("h1").style.color = "blue";
+  </pre>
+  <p>→ 이는 &lt;h1&gt; 태그의 글자 색을 파란색으로 바꿔요.</p>
+
+  <h2>4. 자주 사용하는 DOM 관련 메서드</h2>
+  <ul>
+    <li><code>document.getElementById(id)</code> – ID로 요소 선택</li>
+    <li><code>document.querySelector(selector)</code> – CSS 선택자로 하나 선택</li>
+    <li><code>document.querySelectorAll(selector)</code> – CSS 선택자로 여러 개 선택 (NodeList 반환)</li>
+    <li><code>element.textContent</code> – 요소 안의 텍스트 가져오거나 바꾸기</li>
+    <li><code>element.style</code> – 요소의 스타일 속성 변경</li>
+  </ul>
+
+  <h2>5. DOM의 특징 요약</h2>
+  <ul>
+    <li>HTML 구조를 트리로 표현한 객체 모델</li>
+    <li>브라우저가 자동으로 생성</li>
+    <li>JavaScript로 읽고 수정, 삭제, 추가 가능</li>
+    <li>인터랙티브한 웹사이트의 핵심!</li>
+  </ul>
+
+  <hr>
+  <p><em>Made by 웹 공부하는 나 ✨</em></p>
+</body>
+</html>
