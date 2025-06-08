@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>지난 목표 모아보기</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="calendar.js"></script>
+  <style>
+    :root {
+      --cell-size: 65px;
+    }
+    
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      margin: 20px auto;
+      max-width: 100vw;
+      padding: 0 10px;
+    }
+    .weekday {
+      font-weight: bold;
+      text-align: center;
+      padding: 5px 0;
+      border-bottom: 1px solid #ccc;
+      background-color: #f5f5f5;
+    }
+    .day {
+      width: var(--cell-size);
+      height: var(--cell-size);
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      text-align: center;
+      cursor: pointer;
+      overflow: hidden;
+      font-size: 0.9rem;
+      padding: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+    }
+
+    .achieved { background-color: #b6e2a1; }
+    .missed { background-color: #f6c1c1; }
+
+    .calendar-symbol-row {
+      display: flex;
+      justify-content: center;
+      gap: 2px;
+      margin-top: 2px;
+      flex-wrap: nowrap;
+    }
+
+    .calendar-symbol-row span {
+      font-size: 0.75rem;
+      width: 14px;
+      height: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 600px) {
+      :root {
+        --cell-size: 42px;
+      }
+
+      .calendar-symbol-row span {
+        font-size: 0.6rem;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>지난 목표 모아보기</h2>
+    <button onclick="backToYear()" class="choose-month-btn">◀ 월 선택</button>
+  </header>
+  <main id="calendar-container"></main>
+</body>
+</html>

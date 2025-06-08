@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>오늘의 목표 설정</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="goal.js"></script>
+  <style>
+    .goal-input-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px auto;
+      width: 500px;
+      gap: 10px;
+    }
+    .goal-input-row button {
+      width: 41.8625px;
+      height: 28.6px;
+      font-size: 0.7rem;
+    }
+    .goal-input {
+      width: 400px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    .btn-row { text-align: center; margin: 20px; }
+    .div-for-centralize {
+      width: 41.8625px;
+      height: 28.6px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h2>오늘의 목표를 설정하세요</h2>
+  </header>
+
+  <main>
+    <form id="goal-form">
+      <div class="goal-input-row">
+        <div class="div-for-centralize"></div>
+        <input type="text" class="goal-input" placeholder="목표 1" required>
+        <div class="div-for-centralize"></div>
+      </div>
+      <div class="goal-input-row">
+        <div class="div-for-centralize"></div>
+        <input type="text" class="goal-input" placeholder="목표 2" required>
+        <div class="div-for-centralize"></div>
+      </div>
+      <div class="goal-input-row">
+        <div class="div-for-centralize"></div>
+        <input type="text" class="goal-input" placeholder="목표 3" required>
+        <div class="div-for-centralize"></div>
+      </div>
+      <div id="additional-goals"></div>
+      <div class="btn-row">
+        <button type="button" onclick="addGoal()">+ 추가하기</button>
+        <button type="submit">저장하기</button>
+      </div>
+    </form>
+  </main>
+
+</body>
+</html>

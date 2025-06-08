@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>목표 달성 체크</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="check.js"></script>
+</head>
+<body>
+  <header>
+    <h2>날짜별 목표 달성 여부 체크</h2>
+  </header>
+  <main>
+    <div class="date-select">
+      <label for="date">날짜 선택:</label>
+      <input type="date" id="date" />
+    </div>
+    <form id="check-form"></form>
+    <button class="btn" onclick="saveResults()">저장하기</button>
+  </main>
+</body>
+</html>
